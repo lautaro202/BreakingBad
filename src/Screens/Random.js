@@ -20,8 +20,8 @@ export default function Random() {
     return (
         <div className='app'>
             <div className='container'>
-                <Button className='link' style={{width:500}} variant="contained" color="secondary">
-                    <Link style={{textDecoration:'none', color:'white', width:500}} to ='/'>
+                <Button className='link' style={{width:500,}} variant="contained" color="secondary">
+                    <Link style={{textDecoration:'none', color:'white', width:500, height:25}} to ='/'>
                     Back to home
                     </Link>
 
