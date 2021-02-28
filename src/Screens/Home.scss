@@ -1,0 +1,23 @@
+.container {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    padding: 1rem;
+    align-items: center;
+    background-image: url('https://www.wallpapertip.com/wmimgs/87-879529_breaking-bad-wallpaper-sunset-data-src-fondos-de.jpg');
+    background-size: cover;
+    background-repeat:no-repeat;
+}
+
+.text{
+    padding-top: 4.6rem;
+    top: -60px;
+    position:relative
+}
+.image {
+    position: relative;
+    top: -50px
+}
