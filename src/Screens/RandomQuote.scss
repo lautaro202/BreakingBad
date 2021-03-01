@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&display=swap');
+.container{
+    background: url('https://images6.alphacoders.com/321/thumb-1920-321927.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 725px;
+    margin-left: auto;
+
+    margin-right: auto;
+    .link{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .button{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .card {
+        margin-left: auto;
+        margin-right: auto;
+        width: 8em;
+        width: 355px;
+        height: 125px;
+        background-color: #fcfdfd;
+        border-radius: 9px;
+        padding-bottom: 70px;
+        padding-top: 15px;
+        padding-right: 15px;
+        box-shadow: 30px 31px 35px -5px #080c21;
+        .Quote {
+            font-family: 'Crimson Text', serif;
+            font-size: 30px;
+            text-shadow: .9px .4px .4px black;
+            
+        }
+    };
+}

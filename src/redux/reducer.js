@@ -1,10 +1,12 @@
-import { GET_RANDOM, GET_NAME  } from './constants'
+import { GET_RANDOM, GET_NAME, GET_RANDOM_QUOTE  } from './constants'
 const initialState = {
     name: '',
     ocupation:'',
     status: '',
     alias: '',
-    img: ''
+    img: '',
+    author:'',
+    quote:''
 
 
 }
@@ -30,6 +32,13 @@ function rootReducer(state = initialState, action) {
                 img: action.payload[0].img,
                 ocupation: action.payload[0].occupation[0]
 
+            }
+        }
+        case GET_RANDOM_QUOTE: {
+            return {
+                ...state,
+                author: action.payload[0].author,
+                quote: action.payload[0].quote
             }
         }
 

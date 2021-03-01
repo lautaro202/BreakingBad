@@ -2,7 +2,8 @@ import axios from 'axios'
 
 import {
     GET_RANDOM,
-    GET_NAME
+    GET_NAME,
+    GET_RANDOM_QUOTE
 } from './constants'
 import swal from 'sweetalert'
 
@@ -30,5 +31,16 @@ export function getName(query) {
                 console.log(data)
             })
             .catch( () => swal ( "Oops" ,  "No se encontró el personaje, revisa si escribiste bien el nombre!" ,  "error" ) )
+    }
+}
+export function getRandomQuote() {
+    return function (dispatch) {
+        axios.get(`http://localhost:3001/api/search/random/quote`)
+            .then((res) => res.data )
+            .then ( data => {
+                dispatch({ type: GET_RANDOM_QUOTE, payload:data})
+                console.log(data)
+            })
+            .catch( () => swal ( "Oops" ,  "Hubo un error, por favor intentelo mas tarde!" ,  "error" ) )
     }
 }
