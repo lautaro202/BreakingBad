@@ -1,4 +1,4 @@
-import { GET_RANDOM, GET_NAME, GET_RANDOM_QUOTE  } from './constants'
+import { GET_RANDOM, GET_NAME, GET_RANDOM_QUOTE, GET_QUOTE  } from './constants'
 const initialState = {
     name: '',
     ocupation:'',
@@ -35,6 +35,13 @@ function rootReducer(state = initialState, action) {
             }
         }
         case GET_RANDOM_QUOTE: {
+            return {
+                ...state,
+                author: action.payload[0].author,
+                quote: action.payload[0].quote
+            }
+        }
+        case GET_QUOTE: {
             return {
                 ...state,
                 author: action.payload[0].author,

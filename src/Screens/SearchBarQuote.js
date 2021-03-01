@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { useDispatch } from 'react-redux';
-import { getName } from '../redux/actions';
+import { getQuote } from '../redux/actions';
 import './searchBar.scss'
 
 export default function SearchBar () {
@@ -12,10 +12,10 @@ export default function SearchBar () {
     };
     const handleSubmit = (e) => {
         e.preventDefault();
-        dispatch(getName(input));
-        setInput('');
+        dispatch(getQuote(input));
     }
     
+
     return (
         
         <form 

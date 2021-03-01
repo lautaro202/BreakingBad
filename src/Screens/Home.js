@@ -26,7 +26,7 @@ export default function Home() {
             </div>
             <div className='text'>
                 <Button style={{width:300}} variant="contained" color="primary">
-                    <Link  style={{textDecoration:'none', color:'black'}} to='/admin'>Buscar frase por personaje</Link>
+                    <Link  style={{textDecoration:'none', color:'black'}} to='/quote'>Buscar frase por personaje</Link>
                 </Button>
             </div>
             <div className='text'>

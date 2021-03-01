@@ -14,7 +14,6 @@ router.get('/api/search/random', async (req, res) => {
 
 router.get('/api/search/characters', async (req, res) => {
     const response = await fetch(`${base.url}characters?name=${req.query.q}`)
-    console.log(response)
     const json = await response.json()
     res.json(json)
 })
@@ -24,7 +23,11 @@ router.get('/api/search/random/quote', async (req, res) => {
     res.json(json)
 })
 
-
+router.get('/api/search/quotes', async (req, res) => {
+    const response = await fetch(`${base.url}quote/random?author=${req.query.q}`)
+    const json = await response.json()
+    res.json(json)
+})
 
 
 module.exports = router;
