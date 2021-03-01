@@ -51,6 +51,7 @@ export function getQuote(query) {
             .then ( data => {
                 dispatch({ type: GET_QUOTE, payload:data})
             })
-            .catch( () => swal ( "Oops" ,  "No se encontró el personaje, revisa si escribiste bien el nombre!" ,  "error" ) )
+            .catch( () => swal 
+            ( "Oops" ,  "No se encontró el personaje, recuerda escribir nombre y apellido, respetando las mayusculas." ,  "error" ) )
     }
 }

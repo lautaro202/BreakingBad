@@ -29,5 +29,11 @@ router.get('/api/search/quotes', async (req, res) => {
     res.json(json)
 })
 
+router.get('/api/search/random/dead', async (req, res) => {
+    const response = await fetch(`${base.url}random-death`)
+    const json = await response.json()
+    res.json(json)
+})
+
 
 module.exports = router;
