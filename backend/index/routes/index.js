@@ -32,6 +32,7 @@ router.get('/api/search/quotes', async (req, res) => {
 router.get('/api/search/random/dead', async (req, res) => {
     const response = await fetch(`${base.url}random-death`)
     const json = await response.json()
+    console.log(json)
     res.json(json)
 })
 

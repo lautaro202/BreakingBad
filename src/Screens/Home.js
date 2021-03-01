@@ -31,7 +31,7 @@ export default function Home() {
             </div>
             <div className='text'>
                 <Button style={{width:300}} variant="contained" color="primary">
-                    <Link  style={{textDecoration:'none', color:'black'}} to='/admin'>Muerte aleatoria</Link>
+                    <Link  style={{textDecoration:'none', color:'black'}} to='/random/death'>Muerte aleatoria</Link>
                 </Button>
             </div>
             

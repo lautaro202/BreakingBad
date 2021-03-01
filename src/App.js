@@ -5,6 +5,7 @@ import Random from './Screens/Random'
 import SearchName from './Screens/SearchName'
 import RandomQuote from './Screens/RandomQuote'
 import SearchQuote from './Screens/SearchQuote'
+import RandomDeath from './Screens/RandomDead'
 function App() {
   return (
 
@@ -14,6 +15,8 @@ function App() {
       <Route exact path="/searchname" render={() => <SearchName />} />
       <Route exact path="/random/quote" render={() => <RandomQuote />} />
       <Route exact path="/quote" render={() => <SearchQuote />} />
+      <Route exact path="/random/death" render={() => <RandomDeath />} />
+
 
     </>
 

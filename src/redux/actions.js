@@ -4,7 +4,8 @@ import {
     GET_RANDOM,
     GET_NAME,
     GET_RANDOM_QUOTE,
-    GET_QUOTE
+    GET_QUOTE,
+    GET_RANDOM_DEAD
 } from './constants'
 import swal from 'sweetalert'
 
@@ -14,12 +15,24 @@ export function getRandom() {
         axios.get(`http://localhost:3001/api/search/random`)
             .then((res) => res.data )
             .then ( data => {
+                console.log(data)
                 dispatch({ type: GET_RANDOM, payload:data})
             })
             .catch( () => swal ( "Oops" ,  "Hubo un error, por favor intentelo mas tarde!" ,  "error" ) )
     }
 }
 
+export function getRandomDead() {
+    return function (dispatch) {
+        axios.get(`http://localhost:3001/api/search/random/dead`)
+            .then((res) => res.data )
+            .then ( data => {
+                console.log(data)
+                dispatch({ type: GET_RANDOM_DEAD, payload:{data}})
+            })
+            .catch( () => swal ( "Oops" ,  "Hubo un error, por favor intentelo mas tarde!" ,  "error" ) )
+    }
+}
 
 
 export function getRandomQuote() {
